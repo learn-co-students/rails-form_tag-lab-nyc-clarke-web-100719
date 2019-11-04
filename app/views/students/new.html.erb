@@ -1,0 +1,10 @@
+<h1>Student Form</h1>
+<%= form_tag new_student_path do %>
+    <%= label_tag 'First Name:' %>
+    <%= text_field_tag 'student[first_name]' %><br>
+    <%= label_tag 'Last Name:' %>
+    <%= text_field_tag 'student[last_name]' %>
+    <%= submit_tag "Submit Student" %>
+<% end %>
+
+<%= session[:first_name].values[0] if session[:first_name] %>
