@@ -1,0 +1,13 @@
+<%=form_tag students_path, method: "post" do  |f| %>
+
+<%= label_tag("student[first_name]", "Student Form:")%>
+<%= text_field_tag("student[first_name]")%>
+
+<%= label_tag("student[last_name]", "Student Form:")%>
+<%= text_field_tag("student[last_name]")%>
+
+<%= submit_tag("Submit Student")%>
+
+<%end%>
+
+
