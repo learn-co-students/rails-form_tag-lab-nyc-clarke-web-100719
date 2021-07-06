@@ -8,4 +8,10 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
+  def create
+    session[:first_name] = params[:student][:first_name]
+
+    redirect_to new_student_path
+  end
+
 end
